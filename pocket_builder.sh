@@ -4,11 +4,12 @@
 BROWSER="dwb"
 REPO="https://raw.githubusercontent.com/napear/chipbuild/master"
 
-echo -e "[*] Setting new user password\nDefault password is 'chip'"
-passwd
-
-echo -e "[*] Setting new admin password\nDefault password is 'chip"
-sudo passwd
+# TODO: figure out why this doesn't wait for inputs
+#echo -e "[*] Setting new user password\nDefault password is 'chip'"
+#passwd
+#
+#echo -e "[*] Setting new admin password\nDefault password is 'chip"
+#sudo passwd
 
 echo "[*] updating package manager"
 sudo apt-get update 
