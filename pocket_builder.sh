@@ -16,7 +16,7 @@ sudo apt-get update
 
 echo "[*] installing software packages"
 sudo apt-get -y install openssh-client openssh-server irssi lynx cowsay\
-                        $BROWSER build-essential ruby ruby-dev
+                        $BROWSER build-essential ruby ruby-dev nmap
 
 sudo gem install pry
 
@@ -52,11 +52,8 @@ sudo wget -qO /usr/share/pocket-home/config.json $REPO/configs/pocket-home-templ
 
 sudo sed -i "s/BROWSER_EXEC/${BROWSER}/g" /usr/share/pocket-home/config.json
 
-# Reload home screen
-sudo skill pocket-home
+# Reboot device
+echo "[*] Rebooting Pocket CHIP in 5 seconds"
+sleep 5
+sudo init 6
 
-echo ''
-echo "╔═╗┬  ┬    ╔╦╗┌─┐┌┐┌┌─┐┬┬"
-echo "╠═╣│  │     ║║│ ││││├┤ ││"
-echo "╩ ╩┴─┘┴─┘  ═╩╝└─┘┘└┘└─┘oo"
-echo -e "\nType \"exit\" and restart the terminal."
