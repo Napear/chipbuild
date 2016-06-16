@@ -1,0 +1,16 @@
+#alias list
+alias update='sudo apt-get update'
+alias upgrade='update && sudo apt-get upgrade -y'
+alias dist-upgrade='sudo apt-get dist-upgrade -y'
+alias cleanup='sudo apt-get autoclean && sudo apt-get autoremove'
+alias la='ls -al'
+alias up='cd ..'
+alias agi='sudo apt-get install'
+alias fortune_cow='fortune|cowsay'
+alias search='apt-cache search'
+alias restart='sudo init 6'
+alias shutdown='sudo init 0'
+
+#function list
+function cdl { cd $1; ls;}
+function mkcd { mkdir $1; cd $1;}
