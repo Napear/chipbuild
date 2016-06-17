@@ -15,8 +15,8 @@ echo "[*] updating package manager"
 sudo apt-get update 
 
 echo "[*] installing software packages"
-sudo apt-get -y install openssh-client openssh-server irssi lynx cowsay\
-                        $BROWSER build-essential ruby ruby-dev nmap
+sudo apt-get -y install openssh-client openssh-server irssi lynx cowsay git\
+                        $BROWSER build-essential ruby ruby-dev nmap tree
 
 sudo gem install pry
 
